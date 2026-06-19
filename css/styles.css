@@ -1,0 +1,356 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+
+h1{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 4.8rem;
+    text-align: center;
+    color: chocolate;
+    margin: 0;
+    padding: 2rem;
+}
+
+h2{
+    font-size: 2.8rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+h4{
+    font-size: 1.8rem;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background-color: beige;
+    box-shadow: 0 2px 10px rgba(0,0,0,.15);
+}
+
+/* =========================
+   SLIDER
+========================= */
+
+.banner{
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.slides{
+    display: flex;
+    width: 500%;
+    height: 100%;
+    animation: slider 20s infinite;
+}
+
+.slides img{
+    width: 20%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slider{
+
+    0%,15%{
+        transform: translateX(0%);
+    }
+
+    20%,35%{
+        transform: translateX(-20%);
+    }
+
+    40%,55%{
+        transform: translateX(-40%);
+    }
+
+    60%,75%{
+        transform: translateX(-60%);
+    }
+
+    80%,95%{
+        transform: translateX(-80%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+/* =========================
+   MENÚ
+========================= */
+
+.bg-navegacion{
+    background-color: #f4c430;
+}
+
+.navegacion-principal{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navegacion-principal a{
+    text-decoration: none;
+    color: #222;
+    font-size: 1.8rem;
+    padding: 1.5rem;
+    transition: .3s;
+}
+
+.navegacion-principal a:hover{
+    background-color: white;
+    color: crimson;
+    border-radius: .8rem;
+}
+
+/* =========================
+   CONTENIDO PRINCIPAL
+========================= */
+
+.contenido{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* =========================
+   SIDEBAR IZQUIERDO
+========================= */
+
+.sidebar-izquierda{
+    background-color: #fff8dc;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.sidebar-izquierda a{
+    display: block;
+    text-decoration: none;
+    color: #5a189a;
+    margin-bottom: 1rem;
+}
+
+.sidebar-izquierda a:hover{
+    color: crimson;
+}
+
+/* =========================
+   CATÁLOGO LIBROS
+========================= */
+
+.catalogo-libros{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+
+.libro{
+    background-color: white;
+    border-radius: 1.2rem;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.libro:hover{
+    transform: translateY(-8px);
+    transition: .3s;
+}
+
+.libro img{
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+.libro h3{
+    margin-top: 1rem;
+}
+
+.libro p{
+    line-height: 1.6;
+    color: #555;
+}
+
+/* =========================
+   BOTÓN
+========================= */
+
+.btn-libro{
+    margin-top: auto;
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #f4c430;
+    color: #222;
+    text-decoration: none;
+    border-radius: .8rem;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn-libro:hover{
+    background-color: chocolate;
+    color: white;
+}
+
+/* =========================
+   SIDEBAR DERECHO
+========================= */
+
+.sidebar-derecha{
+    background-color: #fff8dc;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.audio-libro{
+    width: 100%;
+}
+
+video{
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+.video-youtube{
+    width: 100%;
+    height: 250px;
+    border: none;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 3rem;
+}
+
+.redes-sociales{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.redes-sociales a{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    color: #333;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-size: 2.5rem;
+    transition: .3s;
+}
+
+.redes-sociales a:hover{
+    transform: translateY(-5px);
+}
+
+.redes-sociales .fa-facebook-f:hover{
+    color: #1877F2;
+}
+
+.redes-sociales .fa-instagram:hover{
+    color: #E4405F;
+}
+
+.redes-sociales .fa-x-twitter:hover{
+    color: black;
+}
+
+.redes-sociales .fa-youtube:hover{
+    color: red;
+}
+
+.redes-sociales .fa-tiktok:hover{
+    color: #25F4EE;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px){
+
+    .contenido{
+        grid-template-columns: 1fr;
+    }
+
+    .catalogo-libros{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media (max-width: 768px){
+
+    h1{
+        font-size: 3rem;
+    }
+
+    .banner{
+        height: 250px;
+    }
+
+    .catalogo-libros{
+        grid-template-columns: 1fr;
+    }
+
+    .navegacion-principal{
+        flex-wrap: wrap;
+        gap: .5rem;
+    }
+
+    .navegacion-principal a{
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+
+}

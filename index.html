@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Casa del Libro</title>
+
+    <!-- Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <h1>La Casa del Libro</h1>
+
+        <div class="banner">
+
+            <div class="slides">
+
+                <img src="img/slider1.jpg" alt="Slider 1">
+                <img src="img/slider2.png" alt="Slider 2">
+                <img src="img/slider3.png" alt="Slider 3">
+                <img src="img/slider4.png" alt="Slider 4">
+                <img src="img/slider1.png" alt="Slider 5">
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- MENÚ -->
+    <div class="bg-navegacion">
+
+        <nav class="navegacion-principal">
+
+            <a href="#">Inicio</a>
+            <a href="#">Novedades</a>
+            <a href="#">Multimedia</a>
+            <a href="#">Libros</a>
+            <a href="#">Infantil</a>
+            <a href="#">Juvenil</a>
+            <a href="#">Contactar</a>
+
+        </nav>
+
+    </div>
+
+    <!-- CONTENIDO -->
+    <main class="contenido">
+
+        <!-- SIDEBAR IZQUIERDO -->
+        <aside class="sidebar-izquierda">
+
+            <h3>📚 Destacados</h3>
+
+            <a href="#">Libros de texto</a>
+            <a href="#">Libros recomendados</a>
+            <a href="#">Premios y actualidad</a>
+            <a href="#">Catálogos promocionales</a>
+
+            <h3>🆕 Novedades</h3>
+
+            <a href="#">Novedades con vídeo</a>
+            <a href="#">Novedades último del mes</a>
+            <a href="#">Novedades bolsillo</a>
+
+        </aside>
+
+        <!-- LIBROS -->
+        <section class="catalogo-libros">
+
+            <article class="libro">
+                <img src="img/libro_1.jpg" alt="Cálculo Diferencial">
+                <h3>Cálculo Diferencial</h3>
+                <p>
+                    Introducción al estudio de funciones, límites y derivadas para analizar cambios y variaciones.
+                </p>
+                <a href="#" class="btn-libro">Ver más</a>
+            </article>
+
+            <article class="libro">
+                <img src="img/libro_2.jpg" alt="Física II">
+                <h3>Física II</h3>
+                <p>
+                    Estudia electricidad, magnetismo y termodinámica aplicados a fenómenos reales.
+                </p>
+                <a href="#" class="btn-libro">Ver más</a>
+            </article>
+
+            <article class="libro">
+                <img src="img/libro_3.jpg" alt="Fisicoquímica">
+                <h3>Fisicoquímica</h3>
+                <p>
+                    Analiza las propiedades de la materia mediante principios físicos y químicos.
+                </p>
+                <a href="#" class="btn-libro">Ver más</a>
+            </article>
+
+            <article class="libro">
+                <img src="img/libro_4.jpg" alt="Lógica">
+                <h3>Lógica</h3>
+                <p>
+                    Desarrolla habilidades de razonamiento crítico y resolución de problemas.
+                </p>
+                <a href="#" class="btn-libro">Ver más</a>
+            </article>
+
+            <article class="libro">
+                <img src="img/libro_5.jpg" alt="Física General">
+                <h3>Física General</h3>
+                <p>
+                    Explica las leyes fundamentales del movimiento, la energía y las fuerzas.
+                </p>
+                <a href="#" class="btn-libro">Ver más</a>
+            </article>
+
+            <article class="libro">
+                <img src="img/libro_6.jpg" alt="Matemática">
+                <h3>Matemática</h3>
+                <p>
+                    Refuerza conocimientos en álgebra, geometría y análisis matemático.
+                </p>
+                <a href="#" class="btn-libro">Ver más</a>
+            </article>
+
+        </section>
+
+        <!-- SIDEBAR DERECHO -->
+        <aside class="sidebar-derecha">
+
+            <h3>🎧 Audiolibro</h3>
+
+            <h4>El Monje Negro</h4>
+
+            <p>Autor: Antón Chéjov</p>
+
+            <audio controls class="audio-libro">
+                <source src="audio/el_monje_negro.mp3" type="audio/mpeg">
+            </audio>
+
+            <h3>🎬 Video</h3>
+
+            <video controls>
+                <source src="video/el_principito.mp4" type="video/mp4">
+            </video>
+
+            <h3>▶ YouTube</h3>
+
+            <iframe
+                class="video-youtube"
+                src="https://www.youtube.com/embed/UhGatsw57z4"
+                allowfullscreen>
+            </iframe>
+
+        </aside>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>&copy; Derechos Reservados - Trujillo, Perú - 2025</p>
+
+        <div class="redes-sociales">
+
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
