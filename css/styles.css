@@ -106,30 +106,94 @@ header{
 /* =========================
    MENÚ
 ========================= */
-
-.bg-navegacion{
-    background-color: #f4c430;
-}
-
-.navegacion-principal{
+/* MENÚ */
+.navbar{
+    background-color: #f1c40f;
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: relative;
 }
 
-.navegacion-principal a{
+.logo{
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu a{
+    color: black;
     text-decoration: none;
-    color: #222;
-    font-size: 1.8rem;
+    font-size: 18px;
+    transition: 0.3s;
     padding: 1.5rem;
-    transition: .3s;
 }
 
-.navegacion-principal a:hover{
-    background-color: white;
-    color: crimson;
-    border-radius: .8rem;
+
+
+.menu a:hover{
+  
+     transform: scale(1.5);
+    border: 0.2px solid red;
+
+     color: red;
+    background-color: #ffffff;
+    border-radius: .5rem;
 }
+
+
+
+
+/* Checkbox oculto */
+#menu-btn{
+    display: none;
+}
+
+/* Botón hamburguesa */
+.hamburger{
+    display: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+
+    .hamburger{
+        display: block;
+    }
+
+    .menu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #f1c40f;
+        text-align: center;
+        padding: 15px 0;
+        gap: 15px;
+    }
+
+    #menu-btn:checked ~ .menu{
+        display: flex;
+    }
+}
+
 
 /* =========================
    CONTENIDO PRINCIPAL
@@ -353,4 +417,33 @@ footer{
         padding: 1rem;
     }
 
+}
+
+
+
+
+
+.whatsapp-float{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,.25);
+    z-index: 9999;
+    transition: transform .3s ease;
+}
+
+.whatsapp-float:hover{
+    transform: scale(1.5);
+}
+
+.whatsapp-float svg{
+    width: 34px;
+    height: 34px;
 }
