@@ -17,6 +17,7 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    overflow-x: hidden;
 }
 
 /* =========================
@@ -74,6 +75,7 @@ header{
     width: 20%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 @keyframes slider{
@@ -106,27 +108,40 @@ header{
 /* =========================
    MENÚ
 ========================= */
-/* MENÚ */
+
 .navbar{
     background-color: #f1c40f;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 1.5rem 2rem;
     position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,.15);
 }
 
 .logo{
-    color: red;
-    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img{
+    height: 80px;
+    width: auto;
+}
+
+.logo span{
+    color: #145da0;
+    font-size: 2.4rem;
     font-weight: bold;
 }
 
 .menu{
     display: flex;
     list-style: none;
-    gap: 20px;
-    
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 .menu li{
@@ -136,64 +151,33 @@ header{
 .menu a{
     color: black;
     text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s;
-    padding: 1.5rem;
+    font-size: 1.8rem;
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    transition: .3s;
 }
-
-
 
 .menu a:hover{
-  
-     transform: scale(1.5);
-    border: 0.2px solid red;
-
-     color: red;
-    background-color: #ffffff;
-    border-radius: .5rem;
+    transform: scale(1.1);
+    border: 1px solid red;
+    color: red;
+    background-color: white;
 }
 
-
-
-
 /* Checkbox oculto */
+
 #menu-btn{
     display: none;
 }
 
 /* Botón hamburguesa */
+
 .hamburger{
     display: none;
-    color: white;
-    font-size: 32px;
+    color: #222;
+    font-size: 3.2rem;
     cursor: pointer;
 }
-
-/* RESPONSIVE */
-@media (max-width: 768px){
-
-    .hamburger{
-        display: block;
-    }
-
-    .menu{
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: #f1c40f;
-        text-align: center;
-        padding: 15px 0;
-        gap: 15px;
-    }
-
-    #menu-btn:checked ~ .menu{
-        display: flex;
-    }
-}
-
 
 /* =========================
    CONTENIDO PRINCIPAL
@@ -222,10 +206,12 @@ header{
     text-decoration: none;
     color: #5a189a;
     margin-bottom: 1rem;
+    transition: .3s;
 }
 
 .sidebar-izquierda a:hover{
     color: crimson;
+    padding-left: .5rem;
 }
 
 /* =========================
@@ -234,7 +220,7 @@ header{
 
 .catalogo-libros{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     gap: 2rem;
 }
 
@@ -247,11 +233,12 @@ header{
 
     display: flex;
     flex-direction: column;
+
+    transition: .3s;
 }
 
 .libro:hover{
     transform: translateY(-8px);
-    transition: .3s;
 }
 
 .libro img{
@@ -270,7 +257,7 @@ header{
 }
 
 /* =========================
-   BOTÓN
+   BOTÓN LIBRO
 ========================= */
 
 .btn-libro{
@@ -378,6 +365,39 @@ footer{
 }
 
 /* =========================
+   WHATSAPP FLOTANTE
+========================= */
+
+.whatsapp-float{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 65px;
+    height: 65px;
+    background: #25D366;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.25);
+    z-index: 9999;
+
+    transition: transform .3s ease;
+}
+
+.whatsapp-float:hover{
+    transform: scale(1.5);
+}
+
+.whatsapp-float img{
+    width: 38px;
+    height: 38px;
+    display: block;
+}
+
+/* =========================
    RESPONSIVE
 ========================= */
 
@@ -390,7 +410,6 @@ footer{
     .catalogo-libros{
         grid-template-columns: repeat(2,1fr);
     }
-
 }
 
 @media (max-width: 768px){
@@ -403,47 +422,37 @@ footer{
         height: 250px;
     }
 
+    .slides img{
+        height: 250px;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .menu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #f1c40f;
+        text-align: center;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+    #menu-btn:checked ~ .menu{
+        display: flex;
+    }
+
     .catalogo-libros{
         grid-template-columns: 1fr;
     }
 
-    .navegacion-principal{
-        flex-wrap: wrap;
-        gap: .5rem;
+    .menu a{
+        font-size: 1.6rem;
     }
-
-    .navegacion-principal a{
-        font-size: 1.4rem;
-        padding: 1rem;
-    }
-
 }
 
-
-
-
-
-.whatsapp-float{
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 25px;
-    right: 25px;
-    background: #25D366;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,.25);
-    z-index: 9999;
-    transition: transform .3s ease;
-}
-
-.whatsapp-float:hover{
-    transform: scale(1.5);
-}
-
-.whatsapp-float svg{
-    width: 34px;
-    height: 34px;
-}
