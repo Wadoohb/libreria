@@ -5,7 +5,7 @@
     <meta name="description"
           content="La Casa del Libro - Catálogo de libros, audiolibros y contenido multimedia.">
 
-    <title>La Casa del Libro</title>
+    <title>apple store</title>
 
     <link rel="icon" href="img/favicon.ico">
 
@@ -15,50 +15,65 @@
     <!-- Precarga CSS -->
     <link rel="preload" href="css/styles.css" as="style">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@300;400;700&display=swap"
-          rel="stylesheet">
-
     <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
+
+
+    
+
+
+
+
 </head>
+
+
+
 
 <body>
 
-    <!-- HEADER -->
-    <header>
 
-        <h1>La Casa del Libro</h1>
+<header class="banner">
 
-        <div class="banner">
+    <div class="slides">
 
-            <div class="slides">
+        <img src="img/slider1.png" alt="">
+        <img src="img/slider2.png" alt="">
+        <img src="img/slider3.png" alt="">
+        <img src="img/slider4.png" alt="">
+        <img src="img/slider5.png" alt="">
 
-                <img src="img/slider1.jpg" alt="Slider 1">
-                <img src="img/slider2.png" alt="Slider 2">
-                <img src="img/slider3.png" alt="Slider 3">
-                <img src="img/slider4.png" alt="Slider 4">
-                <img src="img/slider5.png" alt="Slider 5">
+    </div>
 
-            </div>
+    <div class="hero-overlay">
 
-        </div>
+        <h1>Pidelo Online</h1>
 
-    </header>
+        <p>
+            Lo último de Apple ya está aquí
+        </p>
+
+        <a href="registrar.html" class="btn-principal">
+            Comprar
+        </a>
+
+    </div>
+
+</header>
 
     <!-- MENÚ -->
    <nav class="navbar">
 
    <div class="logo">
-    <img src="img/logo.png" alt="Logo Librería">
-    <span>Librería</span>
+    
+<a href="index.html">
+        <img src="img/logo.png" alt="Logo">
+    </a>
+
+    <span>Apple Store</span>
 </div>
 
     <input type="checkbox" id="menu-btn">
@@ -67,13 +82,16 @@
         ☰
     </label>
 
-    <ul class="menu">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Libros</a></li>
-        <li><a href="#">Audiolibros</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#">Contacto</a></li>
-    </ul>
+     <ul class="menu">
+
+          <li><a href="index.html">Home</a></li>
+            <li><a href="iphone.html">iPhone</a></li>
+            <li><a href="mac.html">Mac</a></li>
+            <li><a href="ipad.html">iPad</a></li>
+            <li><a href="watch.html">Apple Watch</a></li>
+            <li><a href="airpods.html">Airpods</a></li>
+
+        </ul>
 
 </nav>
 
@@ -83,18 +101,25 @@
         <!-- SIDEBAR IZQUIERDO -->
         <aside class="sidebar-izquierda">
 
-            <h3>📚 Destacados</h3>
+            <h3>Eventos de Apple</h3>
 
-            <a href="#">Libros de texto</a>
-            <a href="#">Libros recomendados</a>
-            <a href="#">Premios y actualidad</a>
-            <a href="#">Catálogos promocionales</a>
+            <a href="https://podcasts.apple.com/us/podcast/wwdc26-keynote/id1473854035?i=1000771732068"target="_blank"  >9 de septiembre de 2025</a>
+            <a href="https://podcasts.apple.com/us/podcast/apple-event-september-9/id1473854035?i=1000725760734"target="_blank"  >9 de junio de 2025</a>
+            <a href="https://podcasts.apple.com/us/podcast/wwdc25-keynote/id1473854035?i=1000712143066"target="_blank"  >9 de septiembre de 2024</a>
+            <a href="https://podcasts.apple.com/us/podcast/apple-event-september-9/id1473854035?i=1000668923190"target="_blank"  >10 de junio de 2024</a>
+            <a href="https://podcasts.apple.com/us/podcast/apple-event-may-7/id1473854035?i=1000654820121"target="_blank"  >7 de mayo de 2024</a>
+             <a href="https://podcasts.apple.com/us/podcast/apple-event-october-30/id1473854035?i=1000633159786"target="_blank"  > 30 de octubre de 2023</a>
+            
+            
 
-            <h3>🆕 Novedades</h3>
 
-            <a href="#">Novedades con vídeo</a>
-            <a href="#">Novedades último del mes</a>
-            <a href="#">Novedades bolsillo</a>
+            <h3> Novedades</h3>
+
+            <a href="https://www.apple.com/la/os/ios/"target="_blank"  >ios 26</a>
+            <a href="https://www.apple.com/la/os/macos/"target="_blank"  >mac OS tahoje</a>
+            <a href="https://www.apple.com/la/os/ipados/"target="_blank"  >iPad OS</a>
+              <a href="https://www.apple.com/la/os/watchos//"target="_blank"  >Watch OS</a>
+
 
         </aside>
 
@@ -102,87 +127,121 @@
         <section class="catalogo-libros">
 
             <article class="libro">
-                <img src="img/libro_1.jpg" alt="Cálculo Diferencial">
-                <h3>Cálculo Diferencial</h3>
+                <img src="img/ipads.png" alt="Cálculo Diferencial">
+                <h3>iPad</h3>
+
+                <dt>nuevo</dt>
                 <p>
-                    Introducción al estudio de funciones, límites y derivadas para analizar cambios y variaciones.
+                    Máximo rendimiento
                 </p>
-                <a href="#" class="btn-libro">Ver más</a>
+                <a href="ipad.html" class="btn-libro">Ver más</a>
             </article>
 
             <article class="libro">
-                <img src="img/libro_2.jpg" alt="Física II">
-                <h3>Física II</h3>
+                <img src="img/iphones.png" alt="Física II">
+                <h3>iPhone</h3>
                 <p>
-                    Estudia electricidad, magnetismo y termodinámica aplicados a fenómenos reales.
+                   Totalmente profesional
                 </p>
-                <a href="#" class="btn-libro">Ver más</a>
+                <a href="iphone.html" class="btn-libro">Ver más</a>
             </article>
 
             <article class="libro">
-                <img src="img/libro_3.jpg" alt="Fisicoquímica">
-                <h3>Fisicoquímica</h3>
+                <img src="img/macs.png" alt="Fisicoquímica">
+                <h3>Mac</h3>
                 <p>
-                    Analiza las propiedades de la materia mediante principios físicos y químicos.
+                    Máxima velocidad para programas avanzados
+Chip M5
                 </p>
-                <a href="#" class="btn-libro">Ver más</a>
+                <a href="mac.html" class="btn-libro">Ver más</a>
             </article>
 
             <article class="libro">
-                <img src="img/libro_4.jpg" alt="Lógica">
-                <h3>Lógica</h3>
+                <img src="img/wachts.png" alt="Lógica">
+                <h3>Watch</h3>
+
                 <p>
-                    Desarrolla habilidades de razonamiento crítico y resolución de problemas.
+                    Mucho más al alcance de tu muñeca
                 </p>
-                <a href="#" class="btn-libro">Ver más</a>
+
+                <a href="watch.html" class="btn-libro">Ver más</a>
             </article>
 
             <article class="libro">
-                <img src="img/libro_5.jpg" alt="Física General">
-                <h3>Física General</h3>
+                <img src="img/airpord.png" alt="airpodsl">
+
+                <h3>Airpods</h3>
+
                 <p>
-                    Explica las leyes fundamentales del movimiento, la energía y las fuerzas.
+                    Audio adaptativo. Sonando ya
                 </p>
-                <a href="#" class="btn-libro">Ver más</a>
+
+              <a href="airpods.html" class="btn-libro">Ver más</a>
+
+
+                
             </article>
 
             <article class="libro">
-                <img src="img/libro_6.jpg" alt="Matemática">
-                <h3>Matemática</h3>
+                <img src="img/music.png" alt="music">
+
+                
+                <h3>Music</h3>
+                <dt> 1 mes gratis</dt>
                 <p>
-                    Refuerza conocimientos en álgebra, geometría y análisis matemático.
+                    
+        
+Regístrate hoy y empieza a escuchar gratis.
                 </p>
-                <a href="#" class="btn-libro">Ver más</a>
+                <a href="https://music.apple.com/us/subscribe" target="_blank"  class="btn-libro">Prueba 1 mes gratis</a>
+
+
             </article>
 
+
+            
         </section>
 
         <!-- SIDEBAR DERECHO -->
         <aside class="sidebar-derecha">
 
-            <h3>🎧 Audiolibro</h3>
-
-            <h4>El Monje Negro</h4>
-
-            <p>Autor: Antón Chéjov</p>
+            <h3>Apple Music</h3>
 
             <audio controls class="audio-libro">
-                <source src="audio/El_monje_negro.mp3" type="audio/mpeg">
+                <source src="audio/music1.mp3" type="audio/mpeg">
             </audio>
 
-            <h3>🎬 Video</h3>
+             <audio controls class="audio-libro">
+                <source src="audio/music2.mp3" type="audio/mpeg">
+            </audio>
+
+             <audio controls class="audio-libro">
+                <source src="audio/music3.mp3" type="audio/mpeg">
+            </audio>
+
+             <audio controls class="audio-libro">
+                <source src="audio/music4.mp3" type="audio/mpeg">
+            </audio>
+<a href="https://music.apple.com/us/new" target="_blank"  class="btn-libro">Escuchar +</a>
+
+            <h3>Trailer iPhone 17 Pro Max</h3>
 
             <video controls>
-                <source src="video/El_principito.mp4" type="video/mp4">
+                <source src="video/presentacion17promax.mp4" type="video/mp4">
             </video>
 
-            <h3>▶ YouTube</h3>
+            <h3>Vinícius Júnior airpods 3
+</h3>
 
-            <iframe
-                class="video-youtube"
-                src="https://www.youtube.com/embed/UhGatsw57z4"
-                allowfullscreen>
-            </iframe>
+           <iframe
+    class="video-youtube"
+    src="https://www.youtube.com/embed/wDgH0FECdJs"
+    title="Video de YouTube"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+</iframe>
 
         </aside>
 
@@ -191,7 +250,7 @@
     <!-- FOOTER -->
     <footer>
 
-        <p>&copy; Derechos Reservados - Trujillo, Perú - 2025</p>
+        <p>&copy; Derechos Reservados - Apple Store  - 2026</p>
 
         <div class="redes-sociales">
 
