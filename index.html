@@ -34,7 +34,10 @@
 <script>
 async function cargarProductos() {
   try {
-    const res = await fetch('https://api.github.com/repos/Wadoohb/libreria/contents/_productos');
+
+const res = await fetch('https://api.github.com/repos/Wadoohb/libreria/contents/_libros');
+
+    
     const archivos = await res.json();
     const catalogo = document.getElementById('catalogo');
     catalogo.innerHTML = '';
