@@ -4,7 +4,36 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin</title>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </head>
-  <body></body>
+  <body>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      CMS.init({
+        config: {
+          backend: {
+            name: 'github',
+            repo: 'Wadoohb/libreria',
+            branch: 'main',
+            base_url: 'https://libreria-l8n7wdm4o-wwwwadoocom.vercel.app'
+          },
+          media_folder: 'images/uploads',
+          collections: [
+            {
+              name: 'libros',
+              label: 'Libros',
+              folder: '_libros',
+              create: true,
+              fields: [
+                { label: 'Título', name: 'title', widget: 'string' },
+                { label: 'Autor', name: 'autor', widget: 'string' },
+                { label: 'Precio', name: 'precio', widget: 'string' },
+                { label: 'Descripción', name: 'descripcion', widget: 'text' },
+                { label: 'Imagen', name: 'imagen', widget: 'image' }
+              ]
+            }
+          ]
+        }
+      });
+    </script>
+  </body>
 </html>
