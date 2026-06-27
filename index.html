@@ -50,6 +50,8 @@ const res = await fetch('https://api.github.com/repos/Wadoohb/libreria/contents/
       const descripcion = texto.match(/descripcion:\s*"?(.+?)"?\n/)?.[1] || '';
       const precio = texto.match(/precio:\s*"?(.+?)"?\n/)?.[1] || '';
       const oferta = texto.match(/oferta:\s*"?(.+?)"?\n/)?.[1] || '';
+
+      const oferta = texto.match(/oferta:\s*"?(.+?)"?\n/)?.[1] || '';
       const imagen = texto.match(/imagen:\s*"?(.+?)"?\n/)?.[1] || '';
       const link = texto.match(/link:\s*"?(.+?)"?\n/)?.[1] || '#';
 
