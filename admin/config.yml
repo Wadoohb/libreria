@@ -3,18 +3,29 @@ backend:
   repo: Wadoohb/libreria
   branch: main
 
-local_backend: false
-
 media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-  - name: "libros"
-    label: "Libros"
-    folder: "_libros"
+  - name: "productos"
+    label: "Productos"
+    folder: "_productos"
+    create: true
+    fields:
+      - { label: "Nombre", name: "title", widget: "string" }
+      - { label: "Descripción", name: "descripcion", widget: "text" }
+      - { label: "Precio", name: "precio", widget: "string" }
+      - { label: "Oferta", name: "oferta", widget: "string", required: false }
+      - { label: "Imagen", name: "imagen", widget: "image" }
+      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Destacado", name: "destacado", widget: "boolean", default: false }
+
+  - name: "ofertas"
+    label: "Ofertas y Noticias"
+    folder: "_ofertas"
     create: true
     fields:
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Autor", name: "autor", widget: "string" }
-      - { label: "Precio", name: "precio", widget: "string" }
       - { label: "Descripción", name: "descripcion", widget: "text" }
       - { label: "Imagen", name: "imagen", widget: "image" }
+      - { label: "Activa", name: "activa", widget: "boolean", default: true }
