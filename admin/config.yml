@@ -3,6 +3,8 @@ backend:
   repo: Wadoohb/libreria
   branch: main
 
+local_backend: false
+
 media_folder: "images/uploads"
 
 collections:
