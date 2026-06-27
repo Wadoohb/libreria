@@ -1,7 +1,7 @@
 ---
 title: "el gato "
 autor: el perro
-precio: s/32443
+precio: s/599
 descripcion: |-
   frdd
   hhh
