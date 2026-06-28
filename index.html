@@ -31,54 +31,6 @@
 </head>
 
 
-<script>
-async function cargarProductos() {
-  try {
-
-const res = await fetch('https://api.github.com/repos/Wadoohb/libreria/contents/_libros');
-
-    
-    const archivos = await res.json();
-    const catalogo = document.getElementById('catalogo');
-    catalogo.innerHTML = '';
-
-    for (const archivo of archivos) {
-      const fileRes = await fetch(archivo.download_url);
-      const texto = await fileRes.text();
-
-      const titulo = texto.match(/title:\s*"?(.+?)"?\n/)?.[1] || '';
-      const descripcion = texto.match(/descripcion:\s*"?(.+?)"?\n/)?.[1] || '';
-      const precio = texto.match(/precio:\s*"?(.+?)"?\n/)?.[1] || '';
-      const oferta = texto.match(/oferta:\s*"?(.+?)"?\n/)?.[1] || '';
-
-      const oferta = texto.match(/oferta:\s*"?(.+?)"?\n/)?.[1] || '';
-      const imagen = texto.match(/imagen:\s*"?(.+?)"?\n/)?.[1] || '';
-      const link = texto.match(/link:\s*"?(.+?)"?\n/)?.[1] || '#';
-
-      catalogo.innerHTML += `
-        <article class="libro">
-          <img src="${imagen}" alt="${titulo}">
-          <h3>${titulo}</h3>
-          ${oferta ? `<dt>${oferta}</dt>` : ''}
-          <p>${descripcion}</p>
-          ${precio ? `<p><strong>S/ ${precio}</strong></p>` : ''}
-          <a href="${link}" class="btn-libro">Ver más</a>
-        </article>
-      `;
-    }
-  } catch(e) {
-    console.error('Error cargando productos:', e);
-  }
-}
-
-cargarProductos();
-</script>
-
-
-
-
-
-
 
 
 <body>
@@ -172,11 +124,7 @@ cargarProductos();
         </aside>
 
         <!-- LIBROS -->
-        
-
-<!-- PRODUCTOS -->
-<section class="catalogo-libros" id="catalogo">
-
+        <section class="catalogo-libros">
 
             <article class="libro">
                 <img src="img/ipads.png" alt="Cálculo Diferencial">
